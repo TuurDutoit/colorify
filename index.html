@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <title></title>
+  </head>
+  <body class="mode-input">
+    <form class="input">
+      <input class="text" type="text" autofocus /><input class="submit" type="submit" value="&#8594;" />
+    </form>
+    <div class="colors hidden">
+      <table cellspacing="0"></table>
+      <div class="data">
+        <div class="color"></div>
+        <div class="rest"></div>
+      </div>
+    </div>
+    <div class="about">
+      <div class="inner">
+        <h1>How do I use this?</h1>
+        <p>
+          On the <a href="#info">homepage</a>, write some text in the input field and hit [enter]. Your text has been converted into a few colors, all displayed on screen.
+        </p>
+        <p>
+          Click any color to see the hex color code. To learn more about color codes, the mechanism of this website and the little <span class="code">+???</span> you may see in the bottom left or right corner, read the next section.
+        </p>
+        <h1>How does this work?</h1>
+        <p>
+          Every character you can possibly type in the input field, has a special code (a simple number), called the unicode code point, used by computers to identify them under the hood. The letter <span class="code">a</span> for example, is number <span class="code">97</span>, the letter <span class="code">c</span> is <span class="code">99</span>, <span class="code">t</span> is <span class="code">116</span>, etc.
+        </p>
+        <p>
+          The first step of the process consists of extracting all the code points and concatenating them. For example, the text <span class="code">cat</span> would result in <span class="code">9997116</span>.
+        </p>
+        <p>
+          The result of the transformation above is always a decimal number. We call it 'decimal', because it is written in base 10. Explaining what that means would lead us too far, so if you want to learn more about that, I recommend <a href="https://en.wikipedia.org/wiki/Decimal" target="_blank">this WikiPedia page</a>.
+        </p>
+        <p>
+          As you may have guessed, there's also different ways (or bases) to write numbers; the one used here is 16, called 'hexadecimal'. To make up for the lack of numbers (we only have 10 numbers, hexadecimal notation needs 16), the first 6 letters of the latin alphabet (a-f) are used in combination with the regular numbers.
+        </p>
+        <p>
+          The next step is to transform the decimal number above to its hexadecimal counterpart. In this case, <span class="code">9997116</span> becomes <span class="code">988b3c</span>.
+        </p>
+        <p>
+          The final step is to convert the hexadecimal number to a few colors. Fortunately, one particular way to express colors is based on hexadecimal numbers. A so-called 'hex' color consists of a hashtag (#), followed by three two-digit numbers between 00 and ff, for the red, blue and green components, respectively. For example, <span class="code">#000000</span> is black (all colors off), <span class="code">#ffffff</span> is white (all colors on) and <span class="code">#ff0000</span> is red (only red on).
+        </p>
+        <p>
+          Now that we have one big hexadecimal number, we just have to split that in pieces of 6 digits; each piece will represent one color. In this case, <span class="code">988b3c</span> already consists of 6 digits, so we get one color, <span style="color:#988b3c">#988b3c</span>.
+        </p>
+        <p>
+          Of course, the resulting hexadecimal numbers won't always consist of a multiple of 6 digits. In that case, the last bit is shown in the bottom left or right corner.
+        </p>
+        <h1>About the project</h1>
+        <p>
+          This project was developed by <a href="http://tuurdutoit.be" target="_blank">Tuur Dutoit</a>.
+        </p>
+        <p>
+          The source code, licensed under the MIT license, can be found on <a href="https://github.com/TuurDutoit/colorify">GitHub</a>. You are free to look at, reuse and adapt the code, without attribution, although that would be nice :)
+        </p>
+        <p>
+          &copy; 2016 Tuur Dutoit
+        </p>
+      </div>
+    </div>
+    <div class="links"></div>
+    <script type="text/javascript" src="lib/index.js"></script>
+  </body>
+</html>

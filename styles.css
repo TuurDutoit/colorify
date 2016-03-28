@@ -1,0 +1,163 @@
+html, body, .input, .colors, .colors table, .about {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 10px;
+  color: white;
+  font-family: sans-serif;
+  background-color: white;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input .text {
+  box-sizing: border-box;
+  width: 70%;
+  padding: 10px;
+  border: 3px solid #b5b5b5;
+  border-radius: 5px;
+  color: #b5b5b5;
+  font-family: sans-serif;
+  font-size: 2em;
+  outline: none;
+}
+
+.input .submit {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  padding: 0;
+  background: none;
+  border: 3px solid transparent;
+  border-radius: 5px;
+  color: #b3b3b3;
+  font-weight: bold;
+  font-size: 4em;
+  cursor: pointer;
+  outline: none;
+  transition: border-color .1s;
+}
+
+.input .submit:hover {
+  border-color: #b3b3b3;
+}
+
+.input .text:focus,
+.input .submit:active {
+  box-shadow: inset 0 0 4px #a5a5a5;
+}
+
+.colors {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.mode-colors .colors {
+  display: block;
+}
+
+.colors td {
+  transition: .1s;
+}
+
+.colors td:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px black;
+}
+
+.data {
+  position: fixed;
+  right: 20px;
+  bottom: 0;
+  text-align: right;
+  text-shadow: 0 0 50px black, 0 0 20px black;
+}
+
+.data.left {
+  left: 20px;
+  right: auto;
+  text-align: left;
+}
+
+.color {
+  font-size: 8em;
+}
+
+.rest {
+  font-size: 3em;
+}
+
+.about {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  background-color: white;
+  overflow: auto;
+}
+
+.about .inner {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.6em;
+  color: #b3b3b3;
+  line-height: 1.4em;
+}
+
+.about a {
+  color: #876EAD;
+  text-decoration: none;
+}
+
+.about a:hover {
+  text-decoration: underline;
+}
+
+.about .code {
+  padding: 0 2px;
+  border: 2px solid #b3b3b3;
+  border-radius: 5px;
+}
+
+.about h1 {
+  margin-top: 2em;
+}
+
+.mode-about .about {
+  display: block;
+}
+
+.links {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5em;
+  color: #b3b3b3;
+}
+
+.links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.mode-colors .links {
+  text-shadow: 0 0 7px black;
+}
+
+.mode-colors .links {
+  color: white;
+}
