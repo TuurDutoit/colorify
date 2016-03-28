@@ -48,6 +48,7 @@ const emptyColorRoute = () => {
 
 const inputRoute = () => {
   $input.value = "";
+  $input.focus();
 }
 
 const linksRoute = mode => {
