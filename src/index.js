@@ -51,6 +51,12 @@ const inputRoute = () => {
   $input.focus();
 }
 
+const leaveInputRoute = mode => {
+  if(mode !== "input") {
+    $input.blur();
+  }
+}
+
 const linksRoute = mode => {
   let html;
 
@@ -78,6 +84,7 @@ const init = () => {
   router.addListener("colors", emptyColorRoute);
   router.addListener("input", inputRoute);
   router.addListener("*", linksRoute);
+  router.addListener("*", leaveInputRoute);
 }
 
 init();

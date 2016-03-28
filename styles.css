@@ -76,6 +76,12 @@ body {
   font-size: 3em;
 }
 
+@media all and (max-width: 700px) {
+  .color {
+    font-size: 5em;
+  }
+}
+
 .about {
   position: fixed;
   top: 0;
