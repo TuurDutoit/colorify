@@ -95,7 +95,7 @@ body {
   max-width: 600px;
   margin: 0 auto;
   font-size: 1.6em;
-  color: #b3b3b3;
+  color: #656565;
   line-height: 1.4em;
 }
 
@@ -122,7 +122,7 @@ body {
 
 .about .code {
   padding: 0 2px;
-  border: 2px solid #b3b3b3;
+  border: 2px solid #656565;
   border-radius: 5px;
 }
 
@@ -141,7 +141,7 @@ body {
   top: 0;
   left: 0;
   font-size: 1.5em;
-  color: #b3b3b3;
+  color: #656565;
 }
 
 .links a {
